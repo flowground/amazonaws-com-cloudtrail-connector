@@ -1,11 +1,11 @@
-# ![LOGO](logo.png) AWS CloudTrail MSP Connector
+# ![LOGO](logo.png) AWS CloudTrail **flow**ground Connector
 
 ## Description
 
-A generated MSP connector for the AWS CloudTrail API (version 2013-11-01).
+A generated **flow**ground connector for the AWS CloudTrail API (version 2013-11-01).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/cloudtrail/2013-11-01/swagger.json<br/>
-Generated at: 2019-05-07T11:15:31+03:00
+Generated at: 2019-05-07T17:35:08+03:00
 
 ## API Description
 
@@ -201,7 +201,7 @@ Supported authorization schemes:
 
 ## License
 
-flowground :- Telekom iPaaS / amazonaws-com-cloudtrail-connector<br/>
+**flow**ground :- Telekom iPaaS / amazonaws-com-cloudtrail-connector<br/>
 Copyright © 2019, [Deutsche Telekom AG](https://www.telekom.de)<br/>
 contact: flowground@telekom.de
 
