@@ -1,0 +1,99 @@
+{
+    "type": "object",
+    "properties": {
+        "MaxResults": {
+            "required": false,
+            "type": "string"
+        },
+        "NextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Contains a request for LookupEvents.",
+            "properties": {
+                "EndTime": {
+                    "description": "Specifies that only events that occur before or at the specified time are returned. If the specified end time is before the specified start time, an error is returned.",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "LookupAttributes": {
+                    "description": "Contains a list of lookup attributes. Currently the list can contain only one item.",
+                    "items": {
+                        "description": "Specifies an attribute and value that filter the events returned.",
+                        "properties": {
+                            "AttributeKey": {
+                                "description": "Specifies an attribute on which to filter the events returned.",
+                                "enum": [
+                                    "EventId",
+                                    "EventName",
+                                    "ReadOnly",
+                                    "Username",
+                                    "ResourceType",
+                                    "ResourceName",
+                                    "EventSource",
+                                    "AccessKeyId"
+                                ],
+                                "type": "string"
+                            },
+                            "AttributeValue": {
+                                "description": "Specifies a value for the specified AttributeKey.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "AttributeKey",
+                            "AttributeValue"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "MaxResults": {
+                    "description": "The number of events to return. Possible values are 1 through 50. The default is 50.",
+                    "maximum": 50,
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "NextToken": {
+                    "description": "The token to use to get the next page of results after a previous API call. This token must be passed in with the same parameters that were specified in the the original call. For example, if the original call specified an AttributeKey of 'Username' with a value of 'root', the call with NextToken should include those same parameters.",
+                    "type": "string"
+                },
+                "StartTime": {
+                    "description": "Specifies that only events that occur after or at the specified time are returned. If the specified start time is after the specified end time, an error is returned.",
+                    "format": "date-time",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
